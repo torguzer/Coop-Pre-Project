@@ -12,6 +12,10 @@ function Navbar() {
                     Shop
                 </Menu.Item>
 
+                <Menu.Item key="Product">
+                    Add Product
+                </Menu.Item>
+
                 <Menu.Item key="cart">
                     Cart
                 </Menu.Item>
