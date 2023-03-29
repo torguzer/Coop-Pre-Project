@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Navbar {
+  height: 60px;
+}
+
+.Content {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Footer {
+  height: 60px;
+  background-color: black;
+}
