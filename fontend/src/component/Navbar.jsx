@@ -6,6 +6,7 @@ function Navbar() {
   return (
     <div className="Navbar">
       <Menu mode="horizontal">
+         
         <Menu.Item key="home">Home</Menu.Item>
 
         <SubMenu key="shop" title="Shop">
