@@ -23,7 +23,7 @@ const items = [
   { img: tor08, price: '9999 $' },
 ];
 
-function Content() {
+function ShoppingPage() {
   return (
     <div>
       <Row justify="center" style={{ marginTop: '20px' }}>
@@ -48,4 +48,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default ShoppingPage;
