@@ -34,6 +34,7 @@ function ProductCreate() {
                                         display: 'flex',
                                         flexDirection: 'column',
                                         justifyContent: 'space-between',
+                                        textAlign: 'center'
                                     }}
                                 >
                                     <div style={{ display: 'flex', justifyContent: 'center' }}>
