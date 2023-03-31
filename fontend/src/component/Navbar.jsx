@@ -1,32 +1,26 @@
-import { Menu } from 'antd';
+import React, { useState} from 'react'
+import { Link } from 'react-router-dom'
+
+import { Menu } from 'antd'
 
 const { SubMenu } = Menu;
+
 
 function Navbar() {
   return (
     <div className="Navbar">
       <Menu mode="horizontal">
          
-        <Menu.Item key="home">Home</Menu.Item>
+        <Menu.Item key="home"><a href='/'>Home</a></Menu.Item>
 
-        <SubMenu key="shop" title="Shop">
-          <Menu.Item key="shop:men">Men</Menu.Item>
-          <Menu.Item key="shop:women">Women</Menu.Item>
-          <Menu.Item key="shop:kids">Kids</Menu.Item>
-        </SubMenu>
+        <Menu.Item key="shoping"><a href='/shoppingPage'>Shoping</a></Menu.Item>
 
-        <SubMenu key="product" title="Add Product">
-          <Menu.Item key="product:addProduct">Add product</Menu.Item>
-          <Menu.Item key="product:updateProduct">Update product</Menu.Item>
-          <Menu.Item key="product:deleteProduct">Delete product</Menu.Item>
+        <SubMenu key="product" title="Product">
+          <Menu.Item key="product:addProduct"><a href='/productCreate'>ADD Product</a></Menu.Item>
         </SubMenu>
 
         <Menu.Item key="cart">Cart</Menu.Item>
 
-        <SubMenu key="login" title="Login/Register" style={{float: 'right'}}>
-          <Menu.Item key="product:addProduct">Login</Menu.Item>
-          <Menu.Item key="product:updateProduct">Register</Menu.Item>
-        </SubMenu>
       </Menu>
     </div>
   );

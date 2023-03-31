@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 import Navbar from './component/Navbar'
 import Footer from './component/Footer'
-import Content from './component/Content/ShoppingPage'
+import Home from './component/Home'
+import ShoppingPage from './component/Content/ShoppingPage'
+import ProductCreate from './component/ProductCreate/CreateProduct'
 
 import './App.css'
 
@@ -11,7 +14,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Content />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/shoppingPage' element={<ShoppingPage />} />
+        <Route path='/productCreate' element={<ProductCreate />} />
+      </Routes>
       <Footer />
     </div>
   )
