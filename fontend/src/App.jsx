@@ -5,7 +5,8 @@ import Navbar from './component/Navbar'
 import Footer from './component/Footer'
 import Home from './component/Home'
 import ShoppingPage from './component/Content/ShoppingPage'
-import ProductCreate from './component/ProductCreate/CreateProduct'
+import Cart from './component/Cart/Cart'
+import ProductCreate from './component/ProductCreate/ProductCreate'
 
 import './App.css'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/shoppingPage' element={<ShoppingPage />} />
         <Route path='/productCreate' element={<ProductCreate />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       <Footer />
     </div>

@@ -1,7 +1,5 @@
-//import desige here
 import { Col, Row, Image, Button, Space, Card } from 'antd';
 
-//import other
 import tor01 from './pic/tor01.jpg';
 import tor02 from './pic/tor02.jpg';
 import tor03 from './pic/tor03.jpg';
@@ -11,16 +9,15 @@ import tor06 from './pic/tor06.jpg';
 import tor07 from './pic/tor07.jpg';
 import tor08 from './pic/tor08.jpg';
 
-//Create function here 
 const items = [
-    { img: tor01, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor02, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor03, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor04, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor05, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor06, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor07, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
-    { img: tor08, price: '9999 $', description: 'abcdefghijk', name: 'torguzaa' },
+    { img: tor01, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor02, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor03, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor04, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor05, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor06, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor07, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: tor08, price: '9999 $', description: 'Product Description', name: 'Product Name' },
 ];
 
 function ShoppingPage() {
