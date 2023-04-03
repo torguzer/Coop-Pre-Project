@@ -1,51 +1,46 @@
 import React from 'react';
-import { Layout, Row, Col, Input } from 'antd';
+import { Layout, Row, Col } from 'antd';
+import Logo from './Logo/Logo.png'
 
 const { Footer } = Layout;
 
 function SiteFooter() {
   return (
     <div style={{ marginTop: '20px' }}>
-      <Footer style={{ height: '400px', backgroundColor: '#000000' }}>
+      <Footer style={{ height: '300px', backgroundColor: '#000000' }}>
         <Row>
-          <Col span={24} >
-            <h1 style={{ color: '#ffffff', fontFamily: 'Arial' }}>FOOTER</h1>
+          <Col span={24}>
+            <hr style={{ borderTop: '1px solid white' }} />
           </Col>
         </Row>
-        <Row>
-          <Col span={7} style={{ margin: '0 29px' }}>
-            <Row>
-              <h3 style={{ color: '#ffffff', fontFamily: 'Arial', display: 'flex', justifyContent: 'flex-start' }}>
-                <p>Location</p>
-              </h3>
+        <Row justify="center" gutter={[16, 32]}>
+          <Col xs={24} sm={7}>
+            <Row justify="center" style={{ marginTop: '37px' }}>
+              <img src={Logo} alt="Logo" width={400} height={112} />
             </Row>
-            <Row>
+            <Row justify="center">
               <p style={{ fontFamily: 'Arial', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-                "53/129-134 หน้ามหาวิทยาลัยเทคโนโลยีสุรนารี ประตู1 Suranari, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000"
+              Our smartphone unleashes the full potential of next-generation technology, providing an unparalleled user experience.
               </p>
             </Row>
           </Col>
-          <Col span={7} style={{ margin: '0 29px' }}>
-            <Row>
-              <h3 style={{ color: '#ffffff', fontFamily: 'Arial', display: 'flex', justifyContent: 'flex-start' }}>
-                <p>About</p>
-              </h3>
+          <Col xs={24} sm={7}>
+            <Row justify="center">
+              <h3 style={{ color: '#ffffff', fontFamily: 'Arial' }}>About</h3>
             </Row>
-            <Row>
+            <Row justify="center">
               <p style={{ fontFamily: 'Arial', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-                "53/129-134 หน้ามหาวิทยาลัยเทคโนโลยีสุรนารี ประตู1 Suranari, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000"
+                11
               </p>
             </Row>
           </Col>
-          <Col span={7} style={{ margin: '0 29px' }}>
-            <Row>
-              <h3 style={{ color: '#ffffff', fontFamily: 'Arial', display: 'flex', justifyContent: 'end' }}>
-                <p>Support</p>
-              </h3>
+          <Col xs={24} sm={7}>
+            <Row justify="center">
+              <h3 style={{ color: '#ffffff', fontFamily: 'Arial' }}>Support</h3>
             </Row>
-            <Row>
+            <Row justify="center">
               <p style={{ fontFamily: 'Arial', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-                "53/129-134 หน้ามหาวิทยาลัยเทคโนโลยีสุรนารี ประตู1 Suranari, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000"
+                22
               </p>
             </Row>
           </Col>

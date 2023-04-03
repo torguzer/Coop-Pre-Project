@@ -1,26 +1,28 @@
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 import { Col, Row, Image, Button, Space, Card } from 'antd';
 
-import tor01 from './pic/tor01.jpg';
-import tor02 from './pic/tor02.jpg';
-import tor03 from './pic/tor03.jpg';
-import tor04 from './pic/tor04.jpg';
-import tor05 from './pic/tor05.jpg';
-import tor06 from './pic/tor06.jpg';
-import tor07 from './pic/tor07.jpg';
-import tor08 from './pic/tor08.jpg';
+import phone1 from './pic/phone1.png';
 
 const items = [
-    { img: tor01, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor02, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor03, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor04, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor05, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor06, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor07, price: '9999 $', description: 'Product Description', name: 'Product Name' },
-    { img: tor08, price: '9999 $', description: 'Product Description', name: 'Product Name' },
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' , path: '/product1Infor'},
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro'},
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+'}, 
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' },
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro' },
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+' },
+    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
 ];
 
 function ShoppingPage() {
+
+    const navigate = useNavigate();
+
+    const goPath = (path) => {
+        navigate(path);
+    };
+
     return (
         <div>
             <Row justify="center" style={{ marginTop: '20px' }}>
@@ -38,22 +40,22 @@ function ShoppingPage() {
                             >
                                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Image
-                                        width={200}
+                                        width={102}
                                         height={200}
                                         src={item.img}
-                                        style={{
-                                            objectFit: 'cover',
-                                            objectPosition: 'center',
-                                        }}
+
                                     />
                                 </div>
                                 <div>
                                     <p>{item.description}</p>
                                     <p>PRICE {item.price}</p>
                                     <Space wrap>
-                                        <Button type="primary" style={{ marginRight: '16px', width: '100%' }}>
-                                            Primary Button
-                                        </Button>
+                                        <Button
+                                            type="primary"
+                                            style={{ marginRight: '16px', width: '100%' }}
+                                            onClick={() => goPath(item.path)}>
+                                            View Details
+                                        </Button> 
                                     </Space>
                                 </div>
                             </Card>

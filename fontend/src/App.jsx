@@ -5,8 +5,9 @@ import Navbar from './component/Navbar'
 import Footer from './component/Footer'
 import Home from './component/Home'
 import ShoppingPage from './component/Content/ShoppingPage'
-import Cart from './component/Cart/Cart'
-import ProductCreate from './component/ProductCreate/ProductCreate'
+import Cart from './component/Content/Cart'
+import ProductCreate from './component/Content/ProductCreate'
+import Product1Infor from './component/Content/Product1Infor'
 
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/shoppingPage' element={<ShoppingPage />} />
         <Route path='/productCreate' element={<ProductCreate />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/product1Infor' element={<Product1Infor />} />
       </Routes>
       <Footer />
     </div>
