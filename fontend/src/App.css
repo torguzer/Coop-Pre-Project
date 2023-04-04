@@ -1,20 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .App {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-}
-.Navbar {
-  height: 100px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: visible;
 }
 
-.Content {
-  display: flex;
-  flex: 1;
-  overflow-y: auto;
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.font-link {
+  font-family: 'Nunito', sans-serif;
+}
+
+.shoppingPage {
+margin-top: 50px; 
+}
+
+.product1Infor {
+  margin-top: 50px; 
 }
 
 .Footer {
-  height: 60px;
-  background-color: black;
+  width: 100%;
 }

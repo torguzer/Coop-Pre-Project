@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Col, Row, Image, Button, Space, Card } from 'antd';
 
-import phone1 from './pic/phone1.png';
+import Phone1 from './pic/ProductPic/Phone1.png';
 
 const items = [
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' , path: '/product1Infor'},
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro'},
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+'}, 
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' },
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro' },
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+' },
-    { img: phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' , path: '/product1Infor'},
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro'},
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+'}, 
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1' },
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Pro' },
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Edge+' },
+    { img: Phone1, price: '9999 $', description: 'Product Description', name: 'NexGen 1 Flex' },
 ];
 
 function ShoppingPage() {
@@ -24,7 +24,7 @@ function ShoppingPage() {
     };
 
     return (
-        <div>
+        <div className='shoppingPage'>
             <Row justify="center" style={{ marginTop: '20px' }}>
                 {items.map((item, index) => (
                     <Col span={5} align="middle" key={index} style={{ marginBottom: '20px' }}>
