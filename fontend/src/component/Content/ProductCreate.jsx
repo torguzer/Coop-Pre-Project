@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Row, Col, Card, Space, Image, Button, Input, Tag } from 'antd';
 
+import '../Desige.css'
+
+import phone1 from './pic/ProductPic/phone1.png'
+
 const { TextArea } = Input;
 
 const tagsData = ['Movies', 'Books', 'Music', 'Sports'];
@@ -38,20 +42,16 @@ function ProductCreate() {
                                 >
                                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                                         <Image
-                                            width={500}
+                                            width={255}
                                             height={500}
-                                            src="https://i.ytimg.com/vi/JWhDNwYWSnQ/maxresdefault.jpg"
-                                            style={{
-                                                objectFit: 'cover',
-                                                objectPosition: 'center',
-                                            }}
+                                            src={phone1}
                                         />
                                     </div>
                                 </Card>
-                                <Button style={{ width: '100%' }}>Upload</Button>
+                                <Button style={{ width: '100%' ,marginBottom: '10px' }}>Upload</Button>
                             </Space>
                         </div>
-                    </Col>
+                    </Col >
                     <Col span={12} style={{ paddingLeft: '40px' }}> 
                         <p>PRODUCT NAME</p>
                         <Input style={{ width: '50%' }} />
