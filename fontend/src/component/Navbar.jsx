@@ -2,8 +2,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Menu } from 'antd';
 import Logo from './Logo/Logo.png';
 
-import './Desige.css'
-
 const { SubMenu } = Menu;
 
 function Navbar() {
@@ -31,10 +29,6 @@ function Navbar() {
 
         <Menu.Item onClick={() => goPath('/shoppingPage')} key="shopping" style={{ color: '#ffffff' }}>
           Shopping
-        </Menu.Item>
-
-        <Menu.Item onClick={() => goPath('/cart')} key="cart" style={{ color: '#ffffff' }}>
-          Cart
         </Menu.Item>
 
         <SubMenu key="product" title="Product" style={{ color: '#ffffff' }}>

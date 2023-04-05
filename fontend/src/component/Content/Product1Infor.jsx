@@ -1,9 +1,15 @@
 import React from 'react';
-import { Row, Col, Image, Card, Space } from 'antd'
+import { Row, Col, Card, Space } from 'antd'
+
+//Background
+
 
 //Product Pic
+import Phone1 from './pic/ProductPic/Phone1.png'
+import Phone3 from './pic/ProductPic/Phone3.png'
 import Phone7 from './pic/ProductPic/Phone7.png'
-import blue_print_1 from './pic/ProductPic/blue_print_1.jpg'
+import Phone5 from './pic/ProductPic/Phone5.png'
+import blue_print_1 from './pic/ProductPic/blue_print_1.png'
 import blue_print_2 from './pic/ProductPic/blue_print_2.jpg'
 
 //icon
@@ -129,10 +135,12 @@ function Product1Infor() {
                     </Space>
                 </Col>
             </Row>
-            <div style={{ marginTop: '50px' }}>
+
+            <div style={{ marginTop: 50, marginBottom: 50 }}>
                 <hr style={{ borderTop: '1px solid gray', width: '95%' }} />
             </div>
-            <Row style={{ marginTop: '50px' }}>
+
+            <Row>
                 <Col span={5} style={{ textAlign: 'left', marginLeft: 130 }}>
                     <img
                         width={333}
@@ -141,6 +149,7 @@ function Product1Infor() {
                         style={{ borderRadius: '10px' }}
                     />
                 </Col>
+
                 <Col spam={5} style={{ textAlign: 'left', marginLeft: 30 }}>
                     <img
                         width={89}
@@ -149,15 +158,16 @@ function Product1Infor() {
                         style={{ borderRadius: '10px' }}
                     />
                 </Col>
-                <Col span={5} style={{ textAlign: 'left', marginLeft: 100 }} s>
-                    <Space direction="vertical" size={15}>
+
+                <Col span={6} style={{ textAlign: 'left', marginLeft: 104, marginRight: 40 }} s>
+                    <Space direction="vertical" size={0}>
                         <div style={{ display: 'flex' }}>
                             <h1 style={{ fontFamily: 'Nunito' }}>
-                                Display
+                                Screen & Display
                             </h1>
                         </div>
                         <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
-                            Display TFT-LCD 24-bit (16 million colors)
+                            -Display TFT-LCD 24-bit (16 million colors)
                         </p>
                         <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
                             - Borderless screen (Ultra Fullview Display)
@@ -170,7 +180,110 @@ function Product1Infor() {
                         </p>
                     </Space>
                 </Col>
+
+                <Col span={5} style={{ textAlign: 'center', marginTop: 18 }}>
+                    <img
+                        width={282}
+                        height={564}
+                        src={Phone5}
+                        style={{ borderRadius: '10px' }}
+                    />
+                </Col>
             </Row>
+
+            <div style={{ marginTop: 50, marginBottom: 50 }}>
+                <hr style={{ borderTop: '1px solid gray', width: '95%' }} />
+            </div>
+
+            <div>
+                <Row >
+
+                    <Col span={5} style={{ textAlign: 'left', marginLeft: 130, marginRight: 25 }}>
+                        <Space direction="vertical" size={0}>
+                            <div style={{ display: 'flex' }}>
+                                <h1 style={{ fontFamily: 'Nunito' }}>
+                                    Rear Camera
+                                </h1>
+                            </div>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - 5MP Digital Camera
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - ƒ/1.8 aperture
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - LED flash
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - AI Camera technology
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - Panorama mode
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - HDR mode for high dynamic range photos
+                            </p>
+                        </Space>
+                    </Col>
+
+                    <Col span={3} style={{ textAlign: 'Left', marginRight:82 }}>
+                        <img
+                            width={250}
+                            height={500}
+                            src={Phone3}
+                            style={{ borderRadius: '10px' }}
+                        />
+                    </Col>
+
+                    <Col span={3} style={{ textAlign: 'Right', marginLeft:82 }}>
+                        <img
+                            width={250}
+                            height={500}
+                            src={Phone1}
+                            style={{ borderRadius: '10px' }}
+                        />
+                    </Col>
+
+                    <Col span={5} style={{ textAlign: 'left', marginLeft: 95, marginRight: 10 }}>
+                        <Space direction="vertical" size={0}>
+                            <div style={{ display: 'flex' }}>
+                                <h1 style={{ fontFamily: 'Nunito' }}>
+                                    Front Camera
+                                </h1>
+                            </div>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - 5MP 
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - ƒ/2 aperture
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - Front camera with HDR
+                            </p>
+                            <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
+                                - Front camera with Portrait mode
+                            </p>
+                        </Space>
+                    </Col>
+
+                </Row>
+
+                <div>
+                    <Row>
+                        <Col span={12}>
+                            
+                        </Col>
+
+                        <Col span={12}>
+
+                        </Col>
+                    </Row>
+                </div>
+            </div>
+
+            <div style={{ marginTop: 50, marginBottom: 50 }}>
+                <hr style={{ borderTop: '1px solid gray', width: '95%' }} />
+            </div>
         </div>
     );
 }

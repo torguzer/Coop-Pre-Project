@@ -7,11 +7,13 @@ const { Footer } = Layout;
 function SiteFooter() {
   return (
     <div className='Footer'>
-      <Footer style={{ height: '320px', backgroundColor: '#000000' }}>
-      <hr style={{ borderTop: '1px solid white' }} />
-        <Row gutter={[24, 24]}>
-          <Col xs={{ span: 24 }} lg={{ span: 7 }}>
-            <Row justify={{ xs: 'center', lg: 'start' }} style={{ height: '100px' }}>
+      <Footer style={{ height: '320px',width: '100%', backgroundColor: '#000000' }}>
+        <Row>
+          <Col span={24}>
+            <hr style={{ borderTop: '1px solid white' }} />
+          </Col>
+          <Col span={9}>
+            <Row style={{ height: '100px' }}>
               <img
                 src={Logo}
                 alt="Logo"
@@ -19,38 +21,38 @@ function SiteFooter() {
                 height={112}
               />
             </Row>
-            <Row justify={{ xs: 'center', lg: 'start' }}>
+            <Row >
               <p style={{ fontFamily: 'Nunito', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-                Our smartphone unleashes the full potential of next-generation technology, providing an unparalleled user experience.
+                Our spanartphone unleashes the full potential of next-generation technology, providing an unparalleled user experience.
               </p>
             </Row>
           </Col>
-          <Col xs={{ span: 24 }} lg={{ span: 5 }}>
+          <Col span={5}>
             <Row>
               <p style={{ fontFamily: 'Nunito', fontSize: '20px', fontWeight: 'bold', color: 'white' }}>
                 About
               </p>
             </Row>
           </Col>
-          <Col xs={{ span: 24 }} lg={{ span: 5 }}>
-            <Row>
+          <Col span={5}>
+            <Row >
               <p style={{ fontFamily: 'Nunito', fontSize: '20px', fontWeight: 'bold', color: 'white' }}>
                 Support
               </p>
             </Row>
-            <Row>
+            <Row >
               <p style={{ fontFamily: 'Nunito', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
                 22
               </p>
             </Row>
           </Col>
-          <Col xs={{ span: 24 }} lg={{ span: 5 }}>
-            <Row>
+          <Col span={5}>
+            <Row >
               <p style={{ fontFamily: 'Nunito', fontSize: '20px', fontWeight: 'bold', color: 'white' }}>
                 Contact Us
               </p>
             </Row>
-            <Row>
+            <Row >
               <p style={{ fontFamily: 'Nunito', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
                 33
               </p>
