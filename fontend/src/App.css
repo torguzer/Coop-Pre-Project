@@ -1,13 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
 .App {
-  display: flex;
+  display: block !important;
   flex-direction: column;
-  width: 100%;
   min-height: 100vh;
   overflow-x: visible;
 }
@@ -31,6 +24,11 @@ margin-top: 50px;
   margin-top: 50px; 
 }
 
+.productCreate {
+  margin-top: 50px; 
+}
+
 .Footer {
+  bottom: 0;
   width: 100%;
 }
