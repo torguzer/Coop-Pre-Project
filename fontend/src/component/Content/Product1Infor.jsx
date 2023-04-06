@@ -226,7 +226,7 @@ function Product1Infor() {
                         </Space>
                     </Col>
 
-                    <Col span={3} style={{ textAlign: 'Left', marginRight:82 }}>
+                    <Col span={3} style={{ textAlign: 'Left', marginRight: 82 }}>
                         <img
                             width={250}
                             height={500}
@@ -235,7 +235,7 @@ function Product1Infor() {
                         />
                     </Col>
 
-                    <Col span={3} style={{ textAlign: 'Right', marginLeft:82 }}>
+                    <Col span={3} style={{ textAlign: 'Right', marginLeft: 82 }}>
                         <img
                             width={250}
                             height={500}
@@ -252,7 +252,7 @@ function Product1Infor() {
                                 </h1>
                             </div>
                             <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
-                                - 5MP 
+                                - 5MP
                             </p>
                             <p style={{ fontFamily: 'Nunito', fontSize: '16px' }}>
                                 - ƒ/2 aperture
@@ -265,22 +265,8 @@ function Product1Infor() {
                             </p>
                         </Space>
                     </Col>
-
                 </Row>
-
-                <div>
-                    <Row>
-                        <Col span={12}>
-                            
-                        </Col>
-
-                        <Col span={12}>
-
-                        </Col>
-                    </Row>
-                </div>
             </div>
-
             <div style={{ marginTop: 50, marginBottom: 50 }}>
                 <hr style={{ borderTop: '1px solid gray', width: '95%' }} />
             </div>
