@@ -31,6 +31,7 @@ function ShoppingPage() {
                         <Space>
                             <Card
                                 title={item.name}
+                                hoverable
                                 style={{
                                     width: 250,
                                     display: 'flex',

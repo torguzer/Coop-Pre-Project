@@ -1,8 +1,6 @@
 .App {
-  display: block !important;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: visible;
 }
 
 .Navbar {
@@ -29,6 +27,12 @@ margin-top: 50px;
 }
 
 .Footer {
+  color: white;
+  background-color: #000000;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
+

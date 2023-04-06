@@ -6,20 +6,14 @@ import phone1 from './pic/ProductPic/phone1.png'
 
 const { TextArea } = Input;
 
-const tagsData = ['Smartphone', 'Laptop', 'smartwatch', 'Other'];
+const tagsData = ['Smartphone', 'Laptop', 'Smartwatch', 'Other'];
 
 function ProductCreate() {
     const [selectedTags, setSelectedTags] = useState(['Books']);
 
     const handleTagChange = (tag, checked) => {
-        setSelectedTags(prevTags => {
-            if (checked) {
-                return [...prevTags, tag];
-            } else {
-                return prevTags.filter(t => t !== tag);
-            }
-        });
-    };
+        setSelectedTags(checked ? [tag] : []);
+      };
 
     return (
         <div className='productCreate'>
