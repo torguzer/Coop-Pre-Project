@@ -88,7 +88,12 @@ function ProductCreate() {
                                 <Col span={15} style={{ textAlign: 'right', marginTop: 20 }}>
                                     <Button type="primary" style={{ width: '30%', marginRight: 10 }} icon={<AppstoreAddOutlined />}>Add Product</Button>
                                     <Button
-                                        style={{ width: '20%', marginRight: 6 }}
+                                        style={{
+                                            width: '20%',
+                                            marginRight: 6,
+                                            backgroundColor: 'red',
+                                            color: 'white'
+                                        }}
                                         icon={<ClearOutlined />}
                                         onClick={handleClearClick}
                                     >

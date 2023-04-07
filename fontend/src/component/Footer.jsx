@@ -7,7 +7,7 @@ const { Footer } = Layout;
 
 function SiteFooter() {
   return (
-    <div className='Footer'>
+    <div className='Footer' style={{ marginTop: 50}}>
       <Footer style={{ height: '300px', width: '100%', backgroundColor: '#000000' }}>
         <Row>
           <Col span={7} style={{ marginRight: 50 }}>
