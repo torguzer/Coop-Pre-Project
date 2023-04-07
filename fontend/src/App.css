@@ -10,20 +10,24 @@
   z-index: 1;
 }
 
+.home {
+  margin-top: 60px;
+}
+
 .font-link {
   font-family: 'Nunito', sans-serif;
 }
 
 .shoppingPage {
-margin-top: 50px; 
+  margin-top: 60px;
 }
 
 .product1Infor {
-  margin-top: 50px; 
+  margin-top: 60px;
 }
 
 .productCreate {
-  margin-top: 50px; 
+  margin-top: 60px;
 }
 
 .Footer {
@@ -35,4 +39,3 @@ margin-top: 50px;
   bottom: 0;
   width: 100%;
 }
-

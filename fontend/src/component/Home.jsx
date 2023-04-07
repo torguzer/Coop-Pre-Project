@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Button } from "antd";
 
 function Home() {
 
   return (
-    <div className="">
-      <h1>Home Page</h1>
+    <div className="home">
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <h1>IN WORK PROCESS</h1>
+      </div>
     </div>
   );
 }
