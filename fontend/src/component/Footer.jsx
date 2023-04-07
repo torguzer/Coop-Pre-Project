@@ -76,23 +76,18 @@ function SiteFooter() {
               </Row>
               <Row justify="center" gutter={[10, 20]}>
                 <Col>
-                  <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/tirawat.euseiwong/" target="_blank" rel="noopener noreferrer">
                     <FacebookOutlined style={{ fontSize: '24px', color: '#3b5998' }} />
                   </a>
                 </Col>
                 <Col>
-                  <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/aazugrot/" target="_blank" rel="noopener noreferrer">
                     <InstagramOutlined style={{ fontSize: '24px', color: '#e4405f' }} />
                   </a>
                 </Col>
                 <Col>
-                  <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
                     <YoutubeOutlined style={{ fontSize: '24px', color: '#cd201f' }} />
-                  </a>
-                </Col>
-                <Col>
-                  <a href="https://twitter.com/youraccount" target="_blank" rel="noopener noreferrer">
-                    <TwitterOutlined style={{ fontSize: '24px', color: '#1da1f2' }} />
                   </a>
                 </Col>
               </Row>

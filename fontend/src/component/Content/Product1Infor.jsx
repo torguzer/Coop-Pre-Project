@@ -1,6 +1,7 @@
-import React from 'react';
-import { Row, Col, Card, Space } from 'antd'
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Row, Col, Card, Space, Image, Rate, Button } from 'antd'
+import { ArrowLeftOutlined, ShoppingOutlined } from '@ant-design/icons'
 //Background
 
 
@@ -20,6 +21,30 @@ import Screen from './pic/Icon/Screen.png'
 
 
 function Product1Infor() {
+
+    const navigate = useNavigate();
+
+    const goPath = (path) => {
+      navigate(path);
+    };
+
+    const [selectedButton, setSelectedButton] = useState("32GB");
+    const [price, setPrice] = useState(299);
+    const [GB, setGB] = useState("32");
+
+    const handleButtonClick = (buttonName) => {
+        setSelectedButton(buttonName);
+        if (buttonName === "32GB") {
+            setPrice(299);
+            setGB("32");
+        } else if (buttonName === "64GB") {
+            setPrice(399);
+            setGB("64");
+        } else {
+            setPrice(299);
+            setGB("32");
+        }
+    }
 
     return (
         <div className='product1Infor'>
@@ -42,8 +67,8 @@ function Product1Infor() {
                     HIGHLIGHTS FEATURES
                 </h1>
             </div>
-            <Row justify="center" gutter={[30, 30]}>
-                <Col span={5} align="middle">
+            <Row justify="center">
+                <Col span={5} align="middle" style={{ marginRight: 10 }}>
                     <Space direction="vertical" size={15}>
                         <Card style={{ background: '#f5f5f5', height: '120px' }}>
                             <Row>
@@ -66,7 +91,7 @@ function Product1Infor() {
                     </Space>
                 </Col>
 
-                <Col span={5}>
+                <Col span={5} style={{ marginRight: 5 }}>
                     <Space direction="vertical" size={15}>
                         <Card style={{ background: '#f5f5f5', height: '120px' }}>
                             <Row>
@@ -89,7 +114,7 @@ function Product1Infor() {
                     </Space>
                 </Col>
 
-                <Col span={5}>
+                <Col span={5} style={{ marginLeft: 5 }}>
                     <Space direction="vertical" size={15}>
                         <Card style={{ background: '#f5f5f5', height: '120px' }}>
                             <Row>
@@ -112,7 +137,7 @@ function Product1Infor() {
                     </Space>
                 </Col>
 
-                <Col span={5}>
+                <Col span={5} style={{ marginLeft: 10 }}>
                     <Space direction="vertical" size={15}>
                         <Card style={{ background: '#f5f5f5', height: '120px' }}>
                             <Row>
@@ -267,10 +292,104 @@ function Product1Infor() {
                     </Col>
                 </Row>
             </div>
+
             <div style={{ marginTop: 50, marginBottom: 50 }}>
                 <hr style={{ borderTop: '1px solid gray', width: '95%' }} />
             </div>
-        </div>
+
+            <Row>
+                <Col span={12} style={{ textAlign: 'right', paddingRight: 50 }}>
+                    <Space>
+                        <Card
+                            title={<div style={{ textAlign: 'center', fontFamily: 'Nunito' }}>NEXGEN 1</div>}
+                            headStyle={{ border: 'none' }}
+                            style={{
+                                width: 500,
+                                height: 600,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'space-between',
+                                marginTop: 25
+                            }}>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Image width={255} height={500} src={Phone1} />
+                            </div>
+                        </Card>
+                    </Space>
+                </Col>
+                <Col Col span={12} style={{ paddingLeft: '40px', fontFamily: 'Nunito' }}>
+                    <h2>NEXGEN 1</h2>
+                    <p>NG-D01M03Y2000</p>
+                    <div style={{ display: 'inline-flex', alignItems: 'center' }}>
+                        <Rate value={4.5} allowHalf disabled={true} style={{ marginBottom: 20, marginRight: 10 }} />
+                        <p style={{ marginTop: 0 }}>4.5 (125 reviews)</p>
+                    </div>
+                    <ul style={{ marginLeft: -20, marginTop: -1 }}>
+                        <li>
+                            Water and dust resistance with IP67¹ standard
+                        </li>
+                        <li>
+                            5MP OIS  Camera
+                        </li>
+                        <li>
+                            2500mAh battery that lasts long
+                        </li>
+                        <li>
+                            TFT-LCD 24-bit 6.59-inch
+                        </li>
+                    </ul>
+                    <h2>Choose your data storage option.</h2>
+                    <div className="">
+                        <Button
+                            direction="horiz"
+                            style={{ width: '25%', height: '15%' }}
+                            onClick={() => handleButtonClick("32GB", 299, "32")}
+                            type={selectedButton === "32GB" ? "primary" : "default"}
+                        >
+                            <div style={{ fontFamily: 'Nunito' }}>
+                                <h3 style={{ marginTop: 10 }}>32 GB</h3>
+                                <p>$299</p>
+                            </div>
+                        </Button>
+                        <Button
+                            direction="horiz"
+                            style={{ width: '25%', height: '15%', marginLeft: 10 }}
+                            onClick={() => handleButtonClick("64GB", 399, "64")}
+                            type={selectedButton === "64GB" ? "primary" : "default"}
+                        >
+                            <div style={{ fontFamily: 'Nunito' }}>
+                                <h3 style={{ marginTop: 10 }}>64 GB</h3>
+                                <p>$399</p>
+                            </div>
+                        </Button>
+                    </div>
+                    <div style={{ backgroundColor: '#F0F0F0', marginTop: 10,marginBottom: 10, width: 370,height: 210, borderRadius: '10px', }}>
+                        <div style={{ marginLeft: 10 }}>
+                            <h2>NEXGEN</h2>
+                            <p style={{ fontSize: 13, marginTop: -15 }}>Black | {GB} GB </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <hr style={{ width: '90%' }}></hr>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: -20 }}>
+                            <p style={{ fontSize: 30 }}>$ {price}</p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: -40 }}>
+                            <p style={{ fontSize: 12 }}>Pre-order now, shipping starts from 01/05/2023 onwards</p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
+                            <Button icon={<ShoppingOutlined />} type="primary" style={{ marginRight: 10}}>
+                                Buy
+                            </Button>
+                            <Button onClick={() => goPath('/shoppingPage')} icon={<ArrowLeftOutlined />} style={{ marginLeft: 10}}>
+                                Back
+                            </Button>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+
+        </div >
     );
 }
 
