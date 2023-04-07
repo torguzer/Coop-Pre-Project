@@ -46,7 +46,7 @@ function Navbar() {
           </Menu.Item>
         </SubMenu>
 
-        <SubMenu key="login" title="Login/Signin" style={{ color: '#ffffff' }}>
+        {/* <SubMenu key="login" title="Login/Signin" style={{ color: '#ffffff' }}>
           <Menu.Item onClick={() => goPath('/')} key="login">
             Login
           </Menu.Item>
@@ -54,7 +54,7 @@ function Navbar() {
           <Menu.Item onClick={() => goPath('/')} key="signin">
             Signin
           </Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
       </Menu>
     </div>
   );
