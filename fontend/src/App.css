@@ -4,13 +4,17 @@
 }
 
 .Navbar {
-  position: relative;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 
 .home {
+  margin-top: 60px;
+}
+
+.productApiTest{
   margin-top: 60px;
 }
 

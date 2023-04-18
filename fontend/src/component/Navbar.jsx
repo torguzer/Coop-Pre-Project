@@ -46,6 +46,10 @@ function Navbar() {
           </Menu.Item>
         </SubMenu>
 
+        <Menu.Item onClick={() => goPath('/productApiTest')} key="shopping" style={{ color: '#ffffff' }}>
+          Api Test
+        </Menu.Item>
+
         {/* <SubMenu key="login" title="Login/Signin" style={{ color: '#ffffff' }}>
           <Menu.Item onClick={() => goPath('/')} key="login">
             Login

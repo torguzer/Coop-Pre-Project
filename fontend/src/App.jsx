@@ -7,6 +7,7 @@ import Home from './component/Home'
 import ShoppingPage from './component/Content/ShoppingPage'
 import ProductCreate from './component/Content/ProductCreate'
 import Product1Infor from './component/Content/Product1Infor'
+import ProductApiTest from './component/Content/ProductApiTest'
 
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/shoppingPage' element={<ShoppingPage />} />
         <Route path='/productCreate' element={<ProductCreate />} />
         <Route path='/product1Infor' element={<Product1Infor />} />
+        <Route path='/productApiTest' element={<ProductApiTest />} />
       </Routes>
       <Footer />
     </div>

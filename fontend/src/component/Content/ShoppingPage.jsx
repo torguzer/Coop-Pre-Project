@@ -36,8 +36,7 @@ function ShoppingPage() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'space-between'
-                                }}
-                            >
+                                }}>
                                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Image
                                         width={102}
