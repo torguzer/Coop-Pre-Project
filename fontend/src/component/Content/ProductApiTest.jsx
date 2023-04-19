@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Row, Col, Card, Image, Button, Rate, Descriptions } from 'antd'
+import { Row, Col, Card, Image, Button, Rate } from 'antd'
+import { Link, useParams } from 'react-router-dom'
 
 function ProductApiTest() {
 
@@ -12,14 +13,10 @@ function ProductApiTest() {
             .catch((error) => console.log(error));
     }, []);
 
-    const goPath = (path) => {
-        console.log("Navigating to:", path);
-    }
-
     return (
         <div className='productApiTest'>
             <Row justify="center" style={{ marginTop: '20px' }} gutter={[16, 16]}>
-                {data && data.products.map((item) => (
+                {data && data.products.slice(0, 20).map((item) => (
                     <Col span={5} key={item.id}>
                         <Card
                             title={item.title}
@@ -50,9 +47,11 @@ function ProductApiTest() {
                             </div>
                             <div style={{ textAlign: 'center' }}>
                                 <Rate value={item.rating} allowHalf disabled style={{ marginBottom: 20 }} />
-                                <Button style={{ width: '100%' }} onClick={() => goPath(item.path)}>
-                                    View Details
-                                </Button>
+                                <Link to={{ pathname: `/productDetail/${item.id}`, state: { product: item } }}>
+                                    <Button style={{ width: '100%' }}>
+                                        View Details
+                                    </Button>
+                                </Link>
                             </div>
                         </Card>
                     </Col>
