@@ -8,6 +8,7 @@ import ShoppingPage from './component/Content/ShoppingPage'
 import ProductCreate from './component/Content/ProductCreate'
 import Product1Infor from './component/Content/Product1Infor'
 import ProductApiTest from './component/Content/ProductApiTest'
+import ProductDetail from './component/Content/ProductDetail'
 
 import './App.css'
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/productCreate' element={<ProductCreate />} />
         <Route path='/product1Infor' element={<Product1Infor />} />
         <Route path='/productApiTest' element={<ProductApiTest />} />
+        <Route path='/productDetail/:id' element={<ProductDetail />} />
       </Routes>
       <Footer />
     </div>

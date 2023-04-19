@@ -30,31 +30,30 @@ function ProductCreate() {
     return (
         <div className='productCreate'>
             <Row justify="center" style={{ marginTop: '20px' }}>
-                <Col span={24}>
+                <Col span={24} style={{fontFamily: 'Nunito'}}>
                     <Row>
                         <Col span={12} style={{ textAlign: 'right', paddingRight: '40px' }}>
-                            <div>
-                                <Space direction="vertical" size={16}>
-                                    <Card
-                                        title={<div style={{ textAlign: 'center' }}>Upload a picture of the product.</div>}
-                                        style={{
-                                            width: 500,
-                                            height: 600,
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            justifyContent: 'space-between',
-                                        }}>
-                                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                            <Image width={255} height={500} src={Phone1} />
-                                        </div>
-                                    </Card>
+                            <Space direction="vertical" size={16}>
+                                <Card
+                                    title={<div style={{ textAlign: 'center', fontFamily: 'Nunito' }}>Upload a picture of the product.</div>}
+                                    style={{
+                                        width: 500,
+                                        height: 600,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'space-between',
+                                    }}>
                                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Button style={{ width: '20%', marginBottom: '10px' }} icon={<UploadOutlined />}>Upload</Button>
+                                        <Image width={255} height={500} src={Phone1} />
                                     </div>
-                                </Space>
-                            </div>
+                                </Card>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Button style={{ width: '20%', marginBottom: '10px' }} icon={<UploadOutlined />}>Upload</Button>
+                                </div>
+                            </Space>
+
                         </Col>
-                        <Col span={12} style={{ paddingLeft: '40px' }}>
+                        <Col span={12} style={{ paddingLeft: '40px', fontFamily: 'Nunito' }}>
                             <p>PRODUCT NAME</p>
                             <Input style={{ width: '60%' }} value={productName} onChange={e => setProductName(e.target.value)} />
 
