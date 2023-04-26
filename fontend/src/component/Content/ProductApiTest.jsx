@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Row, Col, Card, Image, Button, Rate } from 'antd'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function ProductApiTest() {
 
@@ -12,6 +12,10 @@ function ProductApiTest() {
             .then((response) => setData(response.data))
             .catch((error) => console.log(error));
     }, []);
+
+    if (!data) {
+        return <div style={{ display: 'flex', justifyContent: 'center' }}><h1>Loading...</h1></div>
+    }
 
     return (
         <div className='productApiTest'>
@@ -31,7 +35,6 @@ function ProductApiTest() {
                             <div style={{ display: 'flex', justifyContent: 'center', overflow: 'hidden' }}>
                                 <Image
                                     src={item.thumbnail}
-                                    alt={item.title}
                                     width={200}
                                     height={200}
                                     style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: 10 }}
@@ -48,7 +51,7 @@ function ProductApiTest() {
                             <div style={{ textAlign: 'center' }}>
                                 <Rate value={item.rating} allowHalf disabled style={{ marginBottom: 20 }} />
                                 <Link to={{ pathname: `/productDetail/${item.id}`, state: { product: item } }}>
-                                    <Button style={{ width: '100%' }}>
+                                    <Button style={{ width: '100%' }} onClick={() => console.log(item.id)}>
                                         View Details
                                     </Button>
                                 </Link>

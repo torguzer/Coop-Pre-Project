@@ -8,9 +8,9 @@ const { Footer } = Layout;
 function SiteFooter() {
   return (
     <div className='Footer' style={{ marginTop: 50}}>
-      <Footer style={{ height: '300px', width: '100%', backgroundColor: '#000000' }}>
+      <Footer style={{ width: '100%', backgroundColor: '#000000' }}>
         <Row>
-          <Col span={7} style={{ marginRight: 50 }}>
+          <Col span={7} style={{ marginRight: 50, marginBottom: 50 }}>
             <Row style={{ height: '100px' }}>
               <img
                 src={Logo}
@@ -19,11 +19,7 @@ function SiteFooter() {
                 height={112}
               />
             </Row>
-            <Row >
-              <p style={{ fontFamily: 'Nunito', fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-                Our spanartphone unleashes the full potential of next-generation technology, providing an unparalleled user experience.
-              </p>
-            </Row>
+
           </Col>
           <Row>
             <Col>
@@ -68,13 +64,14 @@ function SiteFooter() {
                 </Col>
               </Row>
               <Row>
-                <Col span={24}>
-                  <div>
-                    <hr style={{ marginTop: -5, width: '100%' }}></hr>
-                  </div>
-                </Col>
               </Row>
-              <Row justify="center" gutter={[10, 20]}>
+            </Col>
+          </Row>
+        </Row>
+
+        <hr style={{ borderTop: '1px solid white' }} />
+
+        <Row justify="center" gutter={[10, 20]} style={{ marginTop: 20}}>
                 <Col>
                   <a href="https://www.facebook.com/tirawat.euseiwong/" target="_blank" rel="noopener noreferrer">
                     <FacebookOutlined style={{ fontSize: '24px', color: '#3b5998' }} />
@@ -91,17 +88,6 @@ function SiteFooter() {
                   </a>
                 </Col>
               </Row>
-            </Col>
-          </Row>
-        </Row>
-
-        <hr style={{ borderTop: '1px solid white' }} />
-
-        <Row justify={'center'}>
-          <p style={{ fontFamily: 'Nunito', fontSize: '16px', color: 'white' }}>
-            © 2023 NEXGEN. All Rights Reserved.
-          </p>
-        </Row>
       </Footer>
     </div>
   );
