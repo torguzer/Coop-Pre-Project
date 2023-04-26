@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Row, Col, Card, Image, Rate, Button } from 'antd'
+import { Row, Col, Image, Rate, Button, Modal } from 'antd'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
 
 function getProductById(id) {
@@ -10,15 +10,28 @@ function getProductById(id) {
 
 function ProductDetail() {
 
+  const { id } = useParams();
+  const location = useLocation();
+  const [product, setProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   const navigate = useNavigate();
 
   const goPath = (path) => {
     navigate(path);
   };
-
-  const { id } = useParams();
-  const location = useLocation();
-  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     if (location.state && location.state.product) {
@@ -31,13 +44,16 @@ function ProductDetail() {
   }, [location, id]);
 
   if (!product) {
-    return <div>Loading...</div>
+    return <div style={{ display: 'flex', justifyContent: 'center' }}><h1>Loading...</h1></div>
   }
 
   return (
     <div style={{ justifyContent: 'center', display: 'flex' }}>
+      <Modal title="Success" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ fontFamily: 'Nunito'}}>
+        <p>Product has been added to the cart.</p>
+      </Modal>
       <div className='productDetail' style={{ backgroundColor: '#f5f5f5', width: '90%', borderRadius: '10px' }}>
-        <Row style={{ marginTop: '20px', marginBottom: '20px', justifyContent: 'left' }} gutter={[16, 16]}>
+        <Row style={{ marginTop: '10px', marginBottom: '10px', marginLeft: '5px', justifyContent: 'left' }} gutter={[16, 16]}>
           <Col span={8} >
             <Image
               src={product.thumbnail}
@@ -45,7 +61,6 @@ function ProductDetail() {
               width={400}
               height={400}
               style={{
-                marginLeft: 20,
                 objectFit: 'cover',
                 width: '100%',
                 height: '100%',
@@ -74,10 +89,17 @@ function ProductDetail() {
               <p>Category: {product.category}</p>
             </div>
             <div>
-              <Rate value={product.rating} allowHalf disabled={true} style={{ marginBottom: 70 }} />
+              <Rate value={product.rating} allowHalf disabled={true} style={{ marginBottom: 30 }} />
             </div>
             <div>
-              <Button style={{ color: '#00C754', backgroundColor: 'transparent', marginRight: 20, border: '2px solid #00C754' }}>
+              <Button
+                style={{
+                  color: '#00C754',
+                  backgroundColor: 'transparent',
+                  marginRight: 20,
+                  border: '2px solid #00C754'
+                }}
+                onClick={showModal}>
                 Add to cart
               </Button>
               <Button

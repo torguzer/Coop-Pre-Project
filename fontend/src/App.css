@@ -2,24 +2,91 @@
   flex-direction: column;
   min-height: 100vh;
 }
-
+/*-----------------------------------------------*/
+/*Nabar Css*/
 .Navbar {
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 0 1rem;
+  display: flex;
+  background-color: #000000;
 }
+
+.all-menu {
+  margin-left: auto;
+}
+
+.Menu {
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.Ham-bar {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+
+@media (max-width: 670px) {
+  .menubar {
+    display: none;
+  }
+
+  .Ham-bar {
+    display: block;
+  }
+}
+
+@media (min-width: 670px) {
+  .menubar {
+    display: block;
+  }
+
+  .Ham-bar {
+    display: none;
+  }
+}
+
+/*-----------------------------------------------*/
 
 .home {
   margin-top: 60px;
   margin-top: 60px;
 }
 
-.productDetail{
+.productDetail {
   margin-top: 60px;
 }
 
-.productApiTest{
+.productApiTest {
   margin-top: 60px;
 }
 
@@ -39,6 +106,38 @@
   margin-top: 60px;
 }
 
+.WebResPon {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: calc(60% + 0.8vmin);
+}
+
+.WebResPon img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .WebResPon {
+    padding: 10px;
+  }
+
+  .Footer {
+    height: 500px;
+    /* เพิ่มความสูงของ footer เมื่อจอมีขนาดเล็กลง */
+  }
+}
+
+.menubar {
+  width: 450px;
+  justify-content: flex-end;
+}
+
+/*Css for Product Detail*/
+
+/*FOOTER CSS*/
+
 .Footer {
   color: white;
   background-color: #000000;
@@ -48,4 +147,3 @@
   bottom: 0;
   width: 100%;
 }
-
